@@ -1,0 +1,24 @@
+.root {
+    -fx-font-size: 18;
+}
+
+.square {
+    -fx-border-color:  green ;
+    -fx-background-color:gray;
+    -fx-border-width: 1px ;
+}
+.square.ures {
+    -fx-border-color: gray ;
+    -fx-border-color:  green ;
+    -fx-border-width: 1px ;
+}
+.square.white{
+    -fx-background-color:white;
+    -fx-border-color:  green ;
+    -fx-border-width: 1px ;
+}
+.square.black {
+    -fx-background-color:black;
+    -fx-border-color:  green ;
+    -fx-border-width: 1px ;
+}
