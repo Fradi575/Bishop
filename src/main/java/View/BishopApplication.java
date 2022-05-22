@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
+/**
+ * Bishop alkalmazás létrehozása, fejléc beállítása, fxml betöltése
+ */
 public class BishopApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {

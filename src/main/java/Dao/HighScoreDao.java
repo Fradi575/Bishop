@@ -8,17 +8,17 @@ import javax.xml.bind.Unmarshaller;
 import java.io.*;
 
 /**
- * The HighScoreDAO implements the methods to read and white XML file.
+ * The HighScoreDAO implementálja az XML olvasását és írását
  */
 public class HighScoreDao {
     /**
-     * Gives the xml name as path where the scores will be saved.
+     * XML fájlneve
      */
     public String path ="highscores.xml";
     /**
-     * Add to score to XML file.
+     * Eredmény hozzáadása az XML-hez
      *
-     * @param score Score.
+     * @param score eredmény.
      */
     public void addScore(Score score){
         HighScore highScore = getHighScores();
@@ -31,16 +31,15 @@ public class HighScoreDao {
             OutputStream outputStream = new FileOutputStream(path);
             marshaller.marshal(highScore,file);
             marshaller.marshal(highScore,System.out);
-            System.out.println(outputStream);
         } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Read the elements of the XML file.
+     * XML beolvasása
      *
-     * @return Highscore list.
+     * @return Highscore lista.
      */
     public HighScore getHighScores(){
         HighScore highScore = new HighScore();

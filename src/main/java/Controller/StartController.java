@@ -18,11 +18,20 @@ public class StartController {
     @FXML
     TextField nevMezo;
 
+    /**
+     * Inicializálás
+     */
     @FXML
     private void initialize(){
-        Logger.debug("inicializálás");
+        Logger.debug("Indítás...");
     }
 
+    /**
+     * Start gomb megnyomva.
+     * Betölti a bishop.fxml-t, beállítja a játékos nevét. Megkezdi a játékot.
+     * @param actionEvent
+     * @throws IOException
+     */
     public void startButtonPressed(ActionEvent actionEvent) throws IOException {
         if (!nevMezo.getText().isEmpty()){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/bishop.fxml"));
@@ -33,13 +42,19 @@ public class StartController {
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
-            Logger.info("{} has started a game.",nevMezo.getText());
+            Logger.info("{} elindított egy játékot.",nevMezo.getText());
         }else{
-            Logger.warn("No name provided.");
+            Logger.warn("Nincs név megadva.");
         }
     }
 
+    /**
+     * Eredmények gomb megnyomása. Betölti a highscore.fxml-t.
+     * @param actionEvent
+     * @throws IOException
+     */
     public void highScoreButtonPressed(ActionEvent actionEvent) throws IOException{
+        Logger.info("Eredmények megtekintése.");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/highscore.fxml"));
         fxmlLoader.setLocation(getClass().getResource("/highscore.fxml"));
         Parent root = fxmlLoader.load();

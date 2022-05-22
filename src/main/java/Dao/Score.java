@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * The {@code Score} class implements the score.
+ * {@code Score} eredmények eltárolására szolgál
  */
 @XmlRootElement
 public class Score {
@@ -14,7 +14,7 @@ public class Score {
     private SimpleStringProperty name;
 
     /**
-     * Creates an empty instance of Score.
+     * Üres példány létrehozása
      */
     public Score() {
         this.score = new SimpleStringProperty();
@@ -22,10 +22,10 @@ public class Score {
     }
 
     /**
-     * Creates a new instance of Score with a specified score and date.
+     * Eredmény létrehozása megadott névvel és eredménnyel
      *
-     * @param score The achieved score.
-     * @param name The actual date.
+     * @param score Elért eredmény
+     * @param name Megadott név.
      */
     public Score(String name, String score) {
         this.name = new SimpleStringProperty();
@@ -35,18 +35,18 @@ public class Score {
     }
 
     /**
-     * Get the name.
+     * Név lekérdezése
      *
-     * @return Name.
+     * @return Név
      */
     public String getName() {
         return name.get();
     }
 
     /**
-     * Get the score.
+     * Eredmény lekérdezése
      *
-     * @return Score.
+     * @return Eredmény.
      */
     public String getScore() {
         return score.get();
@@ -54,8 +54,8 @@ public class Score {
 
 
     /**
-     * Set the name.
-     * @param name Name.
+     * Név beállítása
+     * @param name Név.
      */
     @XmlElement
     public void setName(String name) {
@@ -63,9 +63,9 @@ public class Score {
     }
 
     /**
-     * Set the score.
+     * Eredmény beállítása
      *
-     * @param score Score.
+     * @param score eredmény
      */
     @XmlElement
     public void setScore(String score) {

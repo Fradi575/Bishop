@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- *The HighScore class creates a list which contains {@link Score}.
+ *HighScore osztály amely egy lista ami {@link Score} -ket tartalmaz.
  */
 
 @XmlRootElement(name = "highscores")
@@ -14,7 +14,7 @@ public class HighScore {
 
 
     /**
-     * Creates an empty instance of {@code HighScore}.
+     * {@code HighScore} üres példány létrehozása.
      */
     public HighScore() {
         this.highscore = new ArrayList<Score>();
@@ -37,8 +37,8 @@ public class HighScore {
     }
 
     /**
-     * Set the element for the list which contains scores.
-     * @param scores {@link ArrayList} which has {@link Score} elements.
+     * Setter a scores listához
+     * @param scores {@link ArrayList} lista ami {@link Score} elemeket tárol.
      */
     @XmlElement
     public void setHighscore(ArrayList<Score> scores){
@@ -46,8 +46,8 @@ public class HighScore {
     }
 
     /**
-     * Add a new {@link Score} to the highscore list.
-     * @param score Score.
+     * Új {@link Score} hozzáadása
+     * @param score eredmény.
      */
 
     public void addScore(Score score){
